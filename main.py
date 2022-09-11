@@ -93,7 +93,6 @@ def main():
 
     def logger(log: keyboard.KeyboardEvent):
         key = str.upper(log.name)
-        id = log.scan_code
 
         global count
         if keys.get(key) and do_log:
@@ -120,7 +119,6 @@ def main():
             window.component_keyhist()['state'] = 'disabled'
 
     keyboard.on_press(logger)
-    # keyboard.wait()
     window.tk_root().mainloop()
 
 
